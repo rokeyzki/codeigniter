@@ -3,6 +3,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>smarty安装测试</title>
+{{$link1}}
+<script type="text/javascript" src="{{$link2}}"></script>
+<script type="text/javascript" src="{{$link3}}"></script>
 </head>
 <body>
 <h1>{{$title}}</h1>
@@ -12,5 +15,24 @@
 <li>{{$v}}</li>
 {{/foreach}} 
 </ul>
+<p class="text-success"><i class="icon-book"></i>bootstrap test.</p>
+<!-- Button to trigger modal -->
+<a href="#myModal" role="button" class="btn" data-toggle="modal">查看演示案例</a>
+ 
+<!-- Modal -->
+<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Modal header</h3>
+  </div>
+  <div class="modal-body">
+    <p>One fine body…</p>
+  </div>
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">关闭</button>
+    <button class="btn btn-primary">Save changes</button>
+  </div>
+</div>
+
 </body>
 </html>

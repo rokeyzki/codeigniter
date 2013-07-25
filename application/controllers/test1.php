@@ -37,12 +37,30 @@ class test1 extends CI_Controller {
 	}
 	
 	public function smarty(){
-
+		
+			$this->load->helper('html');
 			$this->load->library('smarty');
 			$this->smarty->assign("title","恭喜你smarty安装成功！");
 			$this->smarty->assign("body","欢迎使用smarty模板引擎");
 			$arr = array(1=>'test1',2=>'test2',3=>'test3');
 			$this->smarty->assign("myarray",$arr);
+			
+			$link1 = array(
+				'href' => 'resources/bootstrap/css/bootstrap.min.css',
+				'rel' => 'stylesheet',
+				'type' => 'text/css',
+				'media' => 'screen'
+			);			
+			$link1 = link_tag($link1);
+			$this->smarty->assign("link1",$link1);
+			
+			$this->load->helper('url');
+			$link2 = base_url('resources/jquery/jquery-1.10.2.min.js');
+			$this->smarty->assign("link2",$link2);			
+			
+			$link3 = base_url('resources/bootstrap/js/bootstrap.min.js');
+			$this->smarty->assign("link3",$link3);			
+						
 			$this->smarty->display('smarty.tpl');
 
 	}
