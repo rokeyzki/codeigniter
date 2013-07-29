@@ -41,8 +41,11 @@
 //$route['default_controller'] = "welcome";
 //$route['404_override'] = '';
 
-$route['default_controller'] = 'test1/view';
+$route['default_controller'] = 'welcome';
+$route['(:any)-(:any)'] = '$1/$2'; 
 //$route['(:any)'] = 'test1/$1';
+//$route['test1/(:num)'] = "test1/dbtest_one/$1";
+
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */
