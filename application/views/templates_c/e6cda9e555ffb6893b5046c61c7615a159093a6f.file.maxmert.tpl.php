@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-07-29 15:07:21
+<?php /* Smarty version Smarty-3.1.14, created on 2013-07-30 03:32:04
          compiled from "application\views\maxmert.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2227251f68337165ad1-49290732%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e6cda9e555ffb6893b5046c61c7615a159093a6f' => 
     array (
       0 => 'application\\views\\maxmert.tpl',
-      1 => 1375110418,
+      1 => 1375155121,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'unifunc' => 'content_51f6833722e911_63917777',
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_51f6833722e911_63917777')) {function content_51f6833722e911_63917777($_smarty_tpl) {?><a class="-btn -disabled-">Disabled button</a>
+<?php if ($_valid && !is_callable('content_51f6833722e911_63917777')) {function content_51f6833722e911_63917777($_smarty_tpl) {?><body class="_responsive_">
+		<div class="-container">
+<a class="-btn -disabled-">Disabled button</a>
 <a class="-btn -dark-">Dark</a>
 <a class="-btn -error-">Error</a>
 <a class="-btn -primary-">Primary</a>
@@ -94,4 +96,35 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <div class="-dropdown -dark-">
     <div class="-dropdown-header">Header</div>
     <div class="-dropdown-content">Content</div>
-</div><?php }} ?>
+</div>
+<br><br><br><br>
+<a class="-btn js-modal-show">Show modal</a>
+
+<div class="-modal js-modal">
+    <div class="-modal-header">Header
+        <i class="-closer">×</i>
+    </div>
+    <div class="-modal-content">
+    	Some content to show. It can be buttons, <br>
+    	other plugins inside (dropdowns,<br>
+        for example), videos and other stuff.<br> 
+        You can use any DOM element as modal<br>
+        window, actually.
+    </div>
+</div>
+
+<script type="text/javascript">
+jQuery(document).ready(function () { 	
+	$('.js-modal').modal({
+	  animation: 'dropIn',
+	  theme: 'primary'
+	});
+	
+	$('.js-modal-show').on('click', function() {
+	  $('.js-modal').data('kit-modal').open();
+	});
+});	
+</script>
+</div>
+
+</body><?php }} ?>

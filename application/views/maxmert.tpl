@@ -1,3 +1,5 @@
+<body class="_responsive_">
+		<div class="-container">
 <a class="-btn -disabled-">Disabled button</a>
 <a class="-btn -dark-">Dark</a>
 <a class="-btn -error-">Error</a>
@@ -74,3 +76,34 @@
     <div class="-dropdown-header">Header</div>
     <div class="-dropdown-content">Content</div>
 </div>
+<br><br><br><br>
+<a class="-btn js-modal-show">Show modal</a>
+
+<div class="-modal js-modal">
+    <div class="-modal-header">Header
+        <i class="-closer">×</i>
+    </div>
+    <div class="-modal-content">
+    	Some content to show. It can be buttons, <br>
+    	other plugins inside (dropdowns,<br>
+        for example), videos and other stuff.<br> 
+        You can use any DOM element as modal<br>
+        window, actually.
+    </div>
+</div>
+
+<script type="text/javascript">
+jQuery(document).ready(function () { 	
+	$('.js-modal').modal({
+	  animation: 'dropIn',
+	  theme: 'primary'
+	});
+	
+	$('.js-modal-show').on('click', function() {
+	  $('.js-modal').data('kit-modal').open();
+	});
+});	
+</script>
+</div>
+
+</body>

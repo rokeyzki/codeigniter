@@ -3,9 +3,6 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>smarty安装测试</title>
-{{$link1}}
-<script type="text/javascript" src="{{$link2}}"></script>
-<script type="text/javascript" src="{{$link3}}"></script>
 </head>
 <body>
 <h1>{{$title}}</h1>

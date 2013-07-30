@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-07-26 14:25:42
+<?php /* Smarty version Smarty-3.1.14, created on 2013-07-30 07:56:16
          compiled from "application\views\smarty.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2907151f0c0ec51d794-33769324%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '598be22de3e41508e9e14ac7698f515d0a2648c5' => 
     array (
       0 => 'application\\views\\smarty.tpl',
-      1 => 1374847112,
+      1 => 1375170966,
       2 => 'file',
     ),
   ),
@@ -19,9 +19,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'unifunc' => 'content_51f0c0ec9a3871_04562967',
   'variables' => 
   array (
-    'link1' => 0,
-    'link2' => 0,
-    'link3' => 0,
     'title' => 0,
     'body' => 0,
     'myarray' => 0,
@@ -34,12 +31,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>smarty安装测试</title>
-<?php echo $_smarty_tpl->tpl_vars['link1']->value;?>
-
-<script type="text/javascript" src="<?php echo $_smarty_tpl->tpl_vars['link2']->value;?>
-"></script>
-<script type="text/javascript" src="<?php echo $_smarty_tpl->tpl_vars['link3']->value;?>
-"></script>
 </head>
 <body>
 <h1><?php echo $_smarty_tpl->tpl_vars['title']->value;?>
