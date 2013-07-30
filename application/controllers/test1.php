@@ -52,7 +52,7 @@ class test1 extends CI_Controller {
 	public function __construct()
   	{
     	parent::__construct();
-    	//$this->load->model('dbtest_model');
+    	$this->load->model('dbtest_model');
   	}
 		
 	public function dbtest_all(){
@@ -177,5 +177,51 @@ class test1 extends CI_Controller {
 		$this->smarty->display('pageHeader.tpl');	
 		$this->smarty->display('pageBody.tpl');	
 		$this->smarty->display('pageFooter.tpl');	
+	}
+
+	public function sessionLogin()
+	{
+		$this->load->library('session');
+
+		$newdata = array(
+							'username'  => 'rokeyzki',
+                   			'email'     => 'rokeyzki@gmail.com',
+                   			'logged_in' => TRUE
+        				);
+
+		$this->session->set_userdata($newdata);
+		$this->session->set_userdata('user_id', '1');
+
+		$content = $this->session->all_userdata();
+
+		$this->smarty->assign("content",$content);
+
+		$this->smarty->display('session.tpl');
+		
+	}
+
+	public function sessionLogout()
+	{
+		$this->load->library('session');
+
+		$isLogin = $this->session->userdata('logged_in');
+
+		$content = array();
+
+		if($isLogin)
+		{
+			$content['username'] = '已登录';
+		}
+		else
+		{
+			$content['username'] = '未登录';
+		}
+
+		$this->smarty->assign("content",$content);
+
+		$this->smarty->display('session.tpl');
+
+		$this->session->unset_userdata('user_id');	
+		$this->session->sess_destroy();	
 	}	
 }

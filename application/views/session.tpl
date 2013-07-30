@@ -1,0 +1,1 @@
+<p>{{$content['username']}}</p>
